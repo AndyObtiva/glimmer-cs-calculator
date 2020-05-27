@@ -1,14 +1,15 @@
-source "https://rubygems.org"
-# Add dependencies required to use your gem here.
-# Example:
-#   gem "activesupport", ">= 2.3.5"
+# frozen_string_literal: true
 
-# Add dependencies to develop your gem here.
-# Include everything needed to run rake, tests, features, etc.
+source "https://rubygems.org"
+
+git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+
+gem 'glimmer', '~> 0.7.7'
+
 group :development do
   gem "rspec", "~> 3.5.0"
-  gem "rdoc", "~> 3.12"
-  gem "bundler", "~> 1.0"
-  gem "jeweler", "~> 2.0.1"
+  gem "jeweler", "2.3.9"
   gem "simplecov", ">= 0"
+  gem "glimmer-cs-gladiator", "~> 0.1.6"
+  gem "puts_debuggerer", "~> 0.8.1"
 end

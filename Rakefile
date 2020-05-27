@@ -9,6 +9,7 @@ rescue Bundler::BundlerError => e
   $stderr.puts "Run `bundle install` to install missing gems"
   exit e.status_code
 end
+require 'glimmer/launcher'
 require 'rake'
 
 require 'jeweler'
@@ -21,6 +22,7 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{Glimmer Custom Widget - Scientific Calculator}
   gem.email = "andy.am@gmail.com"
   gem.authors = ["Andy Maleh"]
+  gem.files = Dir['lib/**/*.rb']
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
@@ -29,6 +31,7 @@ require 'rspec/core'
 require 'rspec/core/rake_task'
 RSpec::Core::RakeTask.new(:spec) do |spec|
   spec.pattern = FileList['spec/**/*_spec.rb']
+  spec.ruby_opts = [Glimmer::Launcher.jruby_swt_options]
 end
 
 desc "Code coverage detail"
@@ -48,3 +51,13 @@ Rake::RDocTask.new do |rdoc|
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
+
+require 'glimmer/rake_task'
+Glimmer::Package.javapackager_extra_args =
+  " -name 'Scientific Calculator'" +
+  " -title 'Scientific Calculator'" +
+  " -Bmac.CFBundleName='Scientific Calculator'" +
+  " -Bmac.CFBundleIdentifier='org.glimmer.application.scientificcalculator'" 
+  # " -BlicenseType=" +
+  # " -Bmac.category=" +
+  # " -Bmac.signing-key-developer-id-app="
