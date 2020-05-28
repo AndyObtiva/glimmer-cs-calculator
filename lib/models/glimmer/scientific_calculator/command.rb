@@ -1,14 +1,8 @@
 module Glimmer
   class ScientificCalculator
     class Command
+      include EasilyTypable
       class << self
-        def inherited(klass)
-          # TODO use easily_typable
-          Command.define_method(klass.name.split(':').last.underscore + '?') do
-            self.class == klass
-          end
-        end
-      
         def command_history
           @command_history ||= []
         end

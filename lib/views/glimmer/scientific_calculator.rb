@@ -1,3 +1,5 @@
+require 'easily_typable'
+
 require 'models/glimmer/scientific_calculator/presenter'
 
 module Glimmer
