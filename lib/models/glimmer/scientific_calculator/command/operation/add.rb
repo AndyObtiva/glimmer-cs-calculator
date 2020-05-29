@@ -5,8 +5,8 @@ module Glimmer
         class Add < Operation
           keyword '+'
 
-          def execute
-            if number2 && operation
+          def execute          
+            if number2 && operation && !last_command.equals?
               self.result = operation.calculate.to_s            
               self.number1 = self.result
             else

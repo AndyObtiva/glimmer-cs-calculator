@@ -23,6 +23,12 @@ describe Glimmer::ScientificCalculator::Presenter do
       expect(subject.result).to eq('6')
       subject.press('=')
       expect(subject.result).to eq('9')
+      subject.press('+')
+      expect(subject.result).to eq('9')
+      subject.press('2')
+      expect(subject.result).to eq('2')
+      subject.press('=')
+      expect(subject.result).to eq('11')
     end
 
     it 'adds 2 double-digit numbers' do

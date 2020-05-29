@@ -1,7 +1,7 @@
 module Glimmer
   class ScientificCalculator
     class Command
-      class Equal < Command
+      class Equals < Command
         keyword '='
 
         def execute
