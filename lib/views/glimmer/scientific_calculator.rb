@@ -34,7 +34,7 @@ module Glimmer
         minimum_size 320, 240
         text "Glimmer - Scientific Calculator"
         grid_layout 4, true
-        styled_text(:none) {
+        styled_text(:right) {
           text bind(@presenter, :result)
           font height: 40
           layout_data(:fill, :fill, true, true) {
