@@ -3,7 +3,7 @@ module Glimmer
     class Command
       class AllClear < Command
         def execute
-          @result = '0'
+          self.result = '0'
           numbers_to_calculate.clear
           command_history.clear
         end

@@ -29,7 +29,8 @@ module Glimmer
         end
       end
       
-      attr_reader :button, :result
+      attr_reader :button
+      attr_accessor :result
       
       def initialize(button)
         @button = button
@@ -58,4 +59,4 @@ module Glimmer
   end
 end
 
-Dir[File.join(File.dirname(__FILE__), 'command', '*.rb')].each {|f| require(f)}
+Dir[File.join(File.dirname(__FILE__), 'command', '**', '*.rb')].each {|f| require(f)}

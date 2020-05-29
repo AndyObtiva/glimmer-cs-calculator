@@ -3,12 +3,13 @@ module Glimmer
     class Command
       class Add < Command
         def execute
-          numbers_to_calculate.push(last_result)
-          @result = last_result
+          numbers_to_calculate.push(last_result.to_f)
+          self.result = last_result
         end
         
-        def operation
-          '+'
+        def calculate
+          calculation_result = numbers_to_calculate.reduce(:+)
+          calculation_result.to_s.match(/\.0+$/) ? calculation_result.to_i : calculation_result
         end
       end
     end
