@@ -7,14 +7,14 @@ module Glimmer
            
         # Keyword string representing calculator command (e.g. '+' for Add command)
         # Subclasses must call to define a single keyword
-        def keyword(keyword_text)
+        def keyword(keyword_text)         
           Command.keyword_to_command_class_mapping[keyword_text] = self
         end
         
         # Keyword string array representing calculator command (e.g. ('0'..'9').to_a)
         # Subclasses must call to define multiple keywords
-        def keywords(keyword_text_array)
-          keyword_text_array.each do |keyword_text|
+        def keywords(*keyword_text_array)
+          keyword_text_array.flatten.each do |keyword_text|
             keyword(keyword_text)
           end
         end

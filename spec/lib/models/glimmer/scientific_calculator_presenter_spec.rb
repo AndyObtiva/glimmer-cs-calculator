@@ -7,7 +7,7 @@ describe Glimmer::ScientificCalculator::Presenter do
       subject.press('AC')
     end
     
-    it 'adds 2 single-digit numbers' do
+    it 'adds 2 numbers' do
       expect(subject.result).to eq('0')
       subject.press('1')
       expect(subject.result).to eq('1')
@@ -19,32 +19,47 @@ describe Glimmer::ScientificCalculator::Presenter do
       expect(subject.result).to eq('3')
       subject.press('3')
       expect(subject.result).to eq('3')
-      subject.press('=')
-      expect(subject.result).to eq('6')
-      subject.press('=')
-      expect(subject.result).to eq('9')
-      subject.press('+')
-      expect(subject.result).to eq('9')
-      subject.press('2')
-      expect(subject.result).to eq('2')
-      subject.press('=')
-      expect(subject.result).to eq('11')
-    end
-
-    it 'adds 2 double-digit numbers' do
-      expect(subject.result).to eq('0')
-      subject.press('1')
-      expect(subject.result).to eq('1')
-      subject.press('2')
-      expect(subject.result).to eq('12')
-      subject.press('+')
-      expect(subject.result).to eq('12')
-      subject.press('2')
-      expect(subject.result).to eq('2')
       subject.press('0')
-      expect(subject.result).to eq('20')
+      expect(subject.result).to eq('30')
       subject.press('=')
-      expect(subject.result).to eq('32')
+      expect(subject.result).to eq('33')
+      subject.press('=')
+      expect(subject.result).to eq('63')
+      subject.press('+')
+      expect(subject.result).to eq('63')
+      subject.press('2')
+      expect(subject.result).to eq('2')
+      subject.press('=')
+      expect(subject.result).to eq('65')
     end
+    
+    it 'subtracts 2 numbers' do
+      expect(subject.result).to eq('0')
+      subject.press('6')
+      expect(subject.result).to eq('6')
+      subject.press('5')
+      expect(subject.result).to eq('65')
+      subject.press('-')
+      expect(subject.result).to eq('65')
+      subject.press('2')
+      expect(subject.result).to eq('2')
+      subject.press('-')
+      expect(subject.result).to eq('63')
+      subject.press('3')
+      expect(subject.result).to eq('3')
+      subject.press('0')
+      expect(subject.result).to eq('30')
+      subject.press('=')
+      expect(subject.result).to eq('33')
+      subject.press('=')
+      expect(subject.result).to eq('3')
+      subject.press('-')
+      expect(subject.result).to eq('3')
+      subject.press('2')
+      expect(subject.result).to eq('2')
+      subject.press('=')
+      expect(subject.result).to eq('1')
+    end
+    
   end
 end
