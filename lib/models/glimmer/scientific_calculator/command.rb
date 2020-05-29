@@ -15,7 +15,7 @@ module Glimmer
           command_class = case button
           when "0".."9"
             Command::Number
-          when 'C'
+          when 'AC'
             Command::AllClear
           when '+'
             Command::Add

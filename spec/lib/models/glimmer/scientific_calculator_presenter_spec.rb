@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe Glimmer::ScientificCalculator::Presenter do
   context 'addition' do
-    before do
-      subject.press('C')
+    after do
+      subject.press('AC')
     end
   
     it 'adds 2 single-digit numbers' do
@@ -16,6 +16,8 @@ describe Glimmer::ScientificCalculator::Presenter do
       expect(subject.result).to eq('2')
       subject.press('=')
       expect(subject.result).to eq('3')
+      subject.press('=')
+      expect(subject.result).to eq('5')
     end
 
     it 'adds 2 double-digit numbers' do
