@@ -1,8 +1,10 @@
 module Glimmer
   class ScientificCalculator
     class Command
-      class Operation < Command
+      class Operation < Command      
         class Add < Operation
+          keyword '+'
+
           def execute
             if number2 && operation
               self.result = operation.calculate.to_s            

@@ -2,6 +2,8 @@ module Glimmer
   class ScientificCalculator
     class Command
       class AllClear < Command
+        keyword 'AC'
+
         def execute
           self.result = '0'
           self.number1 = nil

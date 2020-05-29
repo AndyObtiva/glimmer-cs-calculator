@@ -4,23 +4,31 @@ module Glimmer
       include EasilyTypable
       class << self
         attr_accessor :number1, :number2, :operation
+           
+        # Keyword string representing calculator command (e.g. '+' for Add command)
+        # Subclasses must call to define a single keyword
+        def keyword(keyword_text)
+          Command.keyword_to_command_class_mapping[keyword_text] = self
+        end
+        
+        # Keyword string array representing calculator command (e.g. ('0'..'9').to_a)
+        # Subclasses must call to define multiple keywords
+        def keywords(keyword_text_array)
+          keyword_text_array.each do |keyword_text|
+            keyword(keyword_text)
+          end
+        end
+        
+        def keyword_to_command_class_mapping
+          @keyword_to_command_class_mapping ||= {}
+        end
       
         def command_history
           @command_history ||= []
         end
       
         def for(button)
-          # TODO key in the following dynamically into a hash by using symbols stored on classes
-          command_class = case button
-          when "0".."9"
-            Command::Number
-          when 'AC'
-            Command::AllClear
-          when '+'
-            Command::Operation::Add
-          when '='
-            Command::Equal
-          end
+          command_class = keyword_to_command_class_mapping[button]
           command_class.new(button).tap do |command|
             command.execute
             command_history << command
