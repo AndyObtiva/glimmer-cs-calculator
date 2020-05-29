@@ -3,6 +3,7 @@ module Glimmer
     class Command
       class Add < Command
         def execute
+          numbers_to_calculate.push(last_result)
           @result = last_result
         end
         

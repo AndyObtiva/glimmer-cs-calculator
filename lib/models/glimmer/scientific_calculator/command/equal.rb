@@ -3,9 +3,9 @@ module Glimmer
     class Command
       class Equal < Command
         def execute
-          numbers = command_history.select(&:number?).map(&:result)
+          numbers_to_calculate.push(last_result)
           operation = command_history.detect(&:add?).operation
-          @result = eval(numbers.join(operation)).to_s
+          @result = eval(numbers_to_calculate.join(operation)).to_s
         end
       end
     end

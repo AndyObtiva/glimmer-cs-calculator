@@ -3,6 +3,10 @@ module Glimmer
     class Command
       include EasilyTypable
       class << self
+        def numbers_to_calculate
+          @numbers_to_calculate ||= []
+        end
+      
         def command_history
           @command_history ||= []
         end
@@ -11,6 +15,8 @@ module Glimmer
           command_class = case button
           when "0".."9"
             Command::Number
+          when 'C'
+            Command::AllClear
           when '+'
             Command::Add
           when '='
@@ -23,8 +29,7 @@ module Glimmer
         end
       end
       
-      attr_reader :button
-      attr_reader :result
+      attr_reader :button, :result
       
       def initialize(button)
         @button = button
@@ -40,6 +45,10 @@ module Glimmer
       
       def command_history
         Command.command_history
+      end
+      
+      def numbers_to_calculate
+        Command.numbers_to_calculate
       end
     
       def execute
