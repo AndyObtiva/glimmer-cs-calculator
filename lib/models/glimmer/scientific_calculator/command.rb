@@ -3,15 +3,14 @@ module Glimmer
     class Command
       include EasilyTypable
       class << self
-        def numbers_to_calculate
-          @numbers_to_calculate ||= []
-        end
+        attr_accessor :number1, :number2, :operation
       
         def command_history
           @command_history ||= []
         end
       
         def for(button)
+          # TODO key in the following dynamically into a hash by using symbols stored on classes
           command_class = case button
           when "0".."9"
             Command::Number
@@ -36,6 +35,30 @@ module Glimmer
         @button = button
       end
       
+      def number1
+        Command.number1
+      end
+      
+      def number1=(value)
+        Command.number1 = value.to_f
+      end
+      
+      def number2
+        Command.number2
+      end
+      
+      def number2=(value)
+        Command.number2 = value.to_f
+      end
+      
+      def operation
+        Command.operation
+      end
+      
+      def operation=(op)
+        Command.operation = op
+      end
+      
       def last_result
         last_command&.result
       end
@@ -48,10 +71,6 @@ module Glimmer
         Command.command_history
       end
       
-      def numbers_to_calculate
-        Command.numbers_to_calculate
-      end
-    
       def execute
         raise 'Not implemented! Please override in a subclass.'
       end

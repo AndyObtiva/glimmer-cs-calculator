@@ -4,7 +4,9 @@ module Glimmer
       class AllClear < Command
         def execute
           self.result = '0'
-          numbers_to_calculate.clear
+          self.number1 = nil
+          self.number2 = nil
+          self.operation = nil
           command_history.clear
         end
       end
