@@ -18,7 +18,7 @@ module Glimmer
           when 'AC'
             Command::AllClear
           when '+'
-            Command::Add
+            Command::Operation::Add
           when '='
             Command::Equal
           end
