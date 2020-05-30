@@ -16,4 +16,3 @@ Description goes here.
 
 Copyright (c) 2020 Andy Maleh. See LICENSE.txt for
 further details.
-
