@@ -1,11 +1,10 @@
 require 'spec_helper'
 
 describe Glimmer::Calculator::Presenter do
-  # TODO test exception case when calling equals without requesting an operation or providing a second number
   context 'addition' do
     after do
       subject.press('AC')
-    end    
+    end
     
     it 'adds numbers' do
       expect(subject.result).to eq('0')
@@ -52,7 +51,7 @@ describe Glimmer::Calculator::Presenter do
       subject.press('2')
       expect(subject.result).to eq('2')
       subject.press('=')
-      expect(subject.result).to eq('3')      
+      expect(subject.result).to eq('3')
     end
     
     it 'subtracts numbers' do
@@ -110,7 +109,7 @@ describe Glimmer::Calculator::Presenter do
       subject.press('0')
       expect(subject.result).to eq('30')
       subject.press('=')
-      expect(subject.result).to eq('33')      
+      expect(subject.result).to eq('33')
     end
     
     it 'multiplies numbers' do
@@ -160,7 +159,7 @@ describe Glimmer::Calculator::Presenter do
       subject.press('3')
       expect(subject.result).to eq('3')
       subject.press('=')
-      expect(subject.result).to eq('60')      
+      expect(subject.result).to eq('60')
     end
     
     it 'divides numbers' do
@@ -216,8 +215,30 @@ describe Glimmer::Calculator::Presenter do
       subject.press('3')
       expect(subject.result).to eq('3')
       subject.press('=')
-      expect(subject.result).to eq('60')      
+      expect(subject.result).to eq('60')
     end
+    
+    it 'does nothing if equals is pressed without having entered an operation' do
+      expect(subject.result).to eq('0')
+      subject.press('=')
+      expect(subject.result).to eq('0')
+      subject.press('=')
+      expect(subject.result).to eq('0')
+      subject.press('3')
+      expect(subject.result).to eq('3')
+      subject.press('=')
+      expect(subject.result).to eq('3')
+      subject.press('=')
+      expect(subject.result).to eq('3')
+      subject.press('6')
+      expect(subject.result).to eq('6')
+      subject.press('4')
+      expect(subject.result).to eq('64')
+      subject.press('=')
+      expect(subject.result).to eq('64')
+      subject.press('=')
+      expect(subject.result).to eq('64')
+    end    
     
   end
 end
