@@ -1,13 +1,13 @@
 require 'spec_helper'
 
 describe Glimmer::ScientificCalculator::Presenter do
-  # TODO test exception case when calling equal without requesting an operation or providing a second number
+  # TODO test exception case when calling equals without requesting an operation or providing a second number
   context 'addition' do
     after do
       subject.press('AC')
-    end
+    end    
     
-    it 'adds 2 numbers' do
+    it 'adds numbers' do
       expect(subject.result).to eq('0')
       subject.press('1')
       expect(subject.result).to eq('1')
@@ -29,11 +29,33 @@ describe Glimmer::ScientificCalculator::Presenter do
       expect(subject.result).to eq('63')
       subject.press('2')
       expect(subject.result).to eq('2')
+      subject.press('.')
+      expect(subject.result).to eq('2.')
+      subject.press('5')
+      expect(subject.result).to eq('2.5')
       subject.press('=')
-      expect(subject.result).to eq('65')
+      expect(subject.result).to eq('65.5')
+      subject.press('+')
+      expect(subject.result).to eq('65.5')
+      subject.press('.')
+      expect(subject.result).to eq('0.')
+      subject.press('5')
+      expect(subject.result).to eq('0.5')
+      subject.press('=')
+      expect(subject.result).to eq('66')
+
+      # start over again
+      subject.press('1')
+      expect(subject.result).to eq('1')
+      subject.press('+')
+      expect(subject.result).to eq('1')
+      subject.press('2')
+      expect(subject.result).to eq('2')
+      subject.press('=')
+      expect(subject.result).to eq('3')      
     end
     
-    it 'subtracts 2 numbers' do
+    it 'subtracts numbers' do
       expect(subject.result).to eq('0')
       subject.press('6')
       expect(subject.result).to eq('6')
@@ -57,11 +79,41 @@ describe Glimmer::ScientificCalculator::Presenter do
       expect(subject.result).to eq('3')
       subject.press('2')
       expect(subject.result).to eq('2')
+      subject.press('.')
+      expect(subject.result).to eq('2.')
+      subject.press('5')
+      expect(subject.result).to eq('2.5')
       subject.press('=')
-      expect(subject.result).to eq('1')
+      expect(subject.result).to eq('0.5')
+      subject.press('-')
+      expect(subject.result).to eq('0.5')
+      subject.press('.')
+      expect(subject.result).to eq('0.')
+      subject.press('2')
+      expect(subject.result).to eq('0.2')
+      subject.press('=')
+      expect(subject.result).to eq('0.3')
+
+      # start over again
+      subject.press('6')
+      expect(subject.result).to eq('6')
+      subject.press('5')
+      expect(subject.result).to eq('65')
+      subject.press('-')
+      expect(subject.result).to eq('65')
+      subject.press('2')
+      expect(subject.result).to eq('2')
+      subject.press('-')
+      expect(subject.result).to eq('63')
+      subject.press('3')
+      expect(subject.result).to eq('3')
+      subject.press('0')
+      expect(subject.result).to eq('30')
+      subject.press('=')
+      expect(subject.result).to eq('33')      
     end
     
-    it 'multiplies 2 numbers' do
+    it 'multiplies numbers' do
       expect(subject.result).to eq('0')
       subject.press('1')
       expect(subject.result).to eq('1')
@@ -85,9 +137,33 @@ describe Glimmer::ScientificCalculator::Presenter do
       expect(subject.result).to eq('2')
       subject.press('=')
       expect(subject.result).to eq('360')
+      subject.press('*')
+      expect(subject.result).to eq('360')
+      subject.press('.')
+      expect(subject.result).to eq('0.')
+      subject.press('5')
+      expect(subject.result).to eq('0.5')
+      subject.press('=')
+      expect(subject.result).to eq('180')
+
+      # start over again
+      subject.press('1')
+      expect(subject.result).to eq('1')
+      subject.press('0')
+      expect(subject.result).to eq('10')
+      subject.press('*')
+      expect(subject.result).to eq('10')
+      subject.press('2')
+      expect(subject.result).to eq('2')
+      subject.press('*')
+      expect(subject.result).to eq('20')
+      subject.press('3')
+      expect(subject.result).to eq('3')
+      subject.press('=')
+      expect(subject.result).to eq('60')      
     end
     
-    it 'divides 2 numbers' do
+    it 'divides numbers' do
       expect(subject.result).to eq('0')
       subject.press('3')
       expect(subject.result).to eq('3')
@@ -113,6 +189,34 @@ describe Glimmer::ScientificCalculator::Presenter do
       expect(subject.result).to eq('2')
       subject.press('=')
       expect(subject.result).to eq('10')
+      subject.press('/')
+      expect(subject.result).to eq('10')
+      subject.press('0')
+      expect(subject.result).to eq('0')
+      subject.press('.')
+      expect(subject.result).to eq('0.')
+      subject.press('5')
+      expect(subject.result).to eq('0.5')
+      subject.press('=')
+      expect(subject.result).to eq('20')
+      
+      # start over again
+      subject.press('3')
+      expect(subject.result).to eq('3')
+      subject.press('6')
+      expect(subject.result).to eq('36')
+      subject.press('0')
+      expect(subject.result).to eq('360')
+      subject.press('/')
+      expect(subject.result).to eq('360')
+      subject.press('2')
+      expect(subject.result).to eq('2')
+      subject.press('/')
+      expect(subject.result).to eq('180')
+      subject.press('3')
+      expect(subject.result).to eq('3')
+      subject.press('=')
+      expect(subject.result).to eq('60')      
     end
     
   end

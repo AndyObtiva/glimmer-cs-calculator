@@ -17,7 +17,7 @@ module Glimmer
           
           def calculate
             calculation_result = number1 / number2
-            calculation_result.to_s.match(/\.0+$/) ? calculation_result.to_i : calculation_result
+            calculation_result.to_s.match(/\.0+$/) ? calculation_result.to_i : calculation_result #TODO consider moving this to result= method in Command
           end
         end
       end
