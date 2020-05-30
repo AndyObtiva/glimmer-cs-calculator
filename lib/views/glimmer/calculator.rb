@@ -6,6 +6,9 @@ module Glimmer
   class Calculator
     include Glimmer::UI::CustomShell
 
+    VERSION = File.read(File.expand_path(File.join('..', '..', '..', '..', 'VERSION'), __FILE__))
+    LICENSE = File.read(File.expand_path(File.join('..', '..', '..', '..', 'LICENSE.txt'), __FILE__))
+
     ## Add options like the following to configure CustomShell by outside consumers
     #
     # options :title, :background_color
@@ -44,6 +47,13 @@ module Glimmer
         minimum_size 320, 240
         text "Glimmer - Calculator"
         grid_layout 4, true
+        on_about {
+          display_about_dialog
+        }
+        on_preferences {
+          # No need for preferences. Just display about dialog.
+          display_about_dialog
+        }
         # Setting styled_text to multi in order for alignment options to activate
         styled_text(:multi, :wrap, :border) {
           text bind(@presenter, :result)
@@ -240,6 +250,15 @@ module Glimmer
         }
       }
     }
+
+    def display_about_dialog
+      message_box = MessageBox.new(swt_widget)
+      message_box.setText("About")
+      message = "Glimmer - Calculator #{VERSION}\n"
+      message += LICENSE
+      message_box.setMessage(message)
+      message_box.open
+    end
 
   end
 end
