@@ -22,7 +22,8 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{Calculator - Glimmer Custom Shell}
   gem.email = "andy.am@gmail.com"
   gem.authors = ["Andy Maleh"]
-  gem.files = Dir['lib/**/*.rb']
+  gem.files = Dir['VERSION', 'LICENSE.txt', 'lib/**/*.rb', 'bin/**/*']
+  gem.executables = ['calculator']  
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
