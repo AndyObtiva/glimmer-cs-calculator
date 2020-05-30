@@ -1,9 +1,11 @@
 require 'easily_typable'
 
-require 'models/glimmer/scientific_calculator/presenter'
+require 'models/glimmer/calculator/presenter'
+
+# TODO support keyboard input via display filters
 
 module Glimmer
-  class ScientificCalculator
+  class Calculator
     include Glimmer::UI::CustomShell
 
     ## Add options like the following to configure CustomShell by outside consumers
@@ -17,6 +19,9 @@ module Glimmer
     #
     before_body {
       @presenter = Presenter.new
+      @button_font = {height: 14}
+      @button_font_operation = {height: 18}
+      @button_font_big = {height: 28}
     }
 
     ## Uncomment after_body block to setup observers for widgets in body
@@ -32,10 +37,13 @@ module Glimmer
       shell {
         # Replace example content below with custom shell content
         minimum_size 320, 240
-        text "Glimmer - Scientific Calculator"
+        text "Glimmer - Calculator"
         grid_layout 4, true
-        styled_text(:right) {
+        # Setting styled_text to multi in order for alignment options to activate
+        styled_text(:multi, :wrap, :border) {
           text bind(@presenter, :result)
+          alignment swt(:right)
+          right_margin 5
           font height: 40
           layout_data(:fill, :fill, true, true) {
             horizontal_span 4
@@ -51,6 +59,7 @@ module Glimmer
         }
         button {
           text 'AC'
+          font @button_font
           
           layout_data(:fill, :fill, true, true)
           
@@ -60,6 +69,7 @@ module Glimmer
         }
         button {
           text '÷'
+          font @button_font_operation
           
           layout_data(:fill, :fill, true, true)
           
@@ -69,6 +79,7 @@ module Glimmer
         }
         button {
           text '×'
+          font @button_font_operation
           
           layout_data(:fill, :fill, true, true)
           
@@ -78,6 +89,7 @@ module Glimmer
         }
         button {
           text '−'
+          font @button_font_operation
           
           layout_data(:fill, :fill, true, true)
           
@@ -87,6 +99,7 @@ module Glimmer
         }
         button {
           text '7'
+          font @button_font
           
           layout_data(:fill, :fill, true, true)
           
@@ -96,6 +109,7 @@ module Glimmer
         }
         button {
           text '8'
+          font @button_font
           
           layout_data(:fill, :fill, true, true)
           
@@ -105,6 +119,7 @@ module Glimmer
         }
         button {
           text '9'
+          font @button_font
           
           layout_data(:fill, :fill, true, true)
           
@@ -114,6 +129,7 @@ module Glimmer
         }
         button {
           text '+'
+          font @button_font_big
           
           layout_data(:fill, :fill, true, true) {          
             vertical_span 2
@@ -125,6 +141,7 @@ module Glimmer
         }
         button {
           text '4'
+          font @button_font
           
           layout_data(:fill, :fill, true, true)
           
@@ -134,6 +151,7 @@ module Glimmer
         }
         button {
           text '5'
+          font @button_font
           
           layout_data(:fill, :fill, true, true)
           
@@ -143,6 +161,7 @@ module Glimmer
         }
         button {
           text '6'
+          font @button_font
           
           layout_data(:fill, :fill, true, true)
           
@@ -152,6 +171,7 @@ module Glimmer
         }
         button {
           text '1'
+          font @button_font
           
           layout_data(:fill, :fill, true, true)
           
@@ -161,6 +181,7 @@ module Glimmer
         }
         button {
           text '2'
+          font @button_font
           
           layout_data(:fill, :fill, true, true)
           
@@ -170,6 +191,7 @@ module Glimmer
         }
         button {
           text '3'
+          font @button_font
           
           layout_data(:fill, :fill, true, true)
           
@@ -179,6 +201,7 @@ module Glimmer
         }
         button {
           text '='
+          font @button_font_big
           
           layout_data(:fill, :fill, true, true) {          
             vertical_span 2
@@ -190,6 +213,7 @@ module Glimmer
         }
         button {
           text '0'
+          font @button_font
           
           layout_data(:fill, :fill, true, true) {          
             horizontal_span 2
@@ -201,6 +225,7 @@ module Glimmer
         }
         button {
           text '.'
+          font @button_font_operation
           
           layout_data(:fill, :fill, true, true)
           

@@ -15,11 +15,11 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://guides.rubygems.org/specification-reference/ for more options
-  gem.name = "glimmer-cs-scientificcalculator"
-  gem.homepage = "http://github.com/AndyObtiva/glimmer-cs-scientificcalculator"
+  gem.name = "glimmer-cs-calculator"
+  gem.homepage = "http://github.com/AndyObtiva/glimmer-cs-calculator"
   gem.license = "MIT"
-  gem.summary = %Q{Glimmer Custom Widget - Scientific Calculator}
-  gem.description = %Q{Glimmer Custom Widget - Scientific Calculator}
+  gem.summary = %Q{Calculator - Glimmer Custom Shell}
+  gem.description = %Q{Calculator - Glimmer Custom Shell}
   gem.email = "andy.am@gmail.com"
   gem.authors = ["Andy Maleh"]
   gem.files = Dir['lib/**/*.rb']
@@ -47,17 +47,17 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "glimmer-cs-scientificcalculator #{version}"
+  rdoc.title = "glimmer-cs-calculator #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
 
 require 'glimmer/rake_task'
 Glimmer::Package.javapackager_extra_args =
-  " -name 'Scientific Calculator'" +
-  " -title 'Scientific Calculator'" +
-  " -Bmac.CFBundleName='Scientific Calculator'" +
-  " -Bmac.CFBundleIdentifier='org.glimmer.application.scientificcalculator'" 
+  " -name 'Calculator'" +
+  " -title 'Calculator'" +
+  " -Bmac.CFBundleName='Calculator'" +
+  " -Bmac.CFBundleIdentifier='org.glimmer.application.calculator'" 
   # " -BlicenseType=" +
   # " -Bmac.category=" +
   # " -Bmac.signing-key-developer-id-app="

@@ -1,5 +1,5 @@
 module Glimmer
-  class ScientificCalculator
+  class Calculator
     class Command
       class Operation < Command      
         class Multiply < Operation

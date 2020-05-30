@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Glimmer::ScientificCalculator::Presenter do
+describe Glimmer::Calculator::Presenter do
   # TODO test exception case when calling equals without requesting an operation or providing a second number
   context 'addition' do
     after do

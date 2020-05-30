@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/glimmer-cs-scientificcalculator'
+require 'glimmer/launcher'
 
-include Glimmer
-
-scientific_calculator.open
+calculator_runner = File.expand_path('../glimmer-cs-calculator', __FILE__)
+launcher = Glimmer::Launcher.new([calculator_runner] + ARGV)
+launcher.launch

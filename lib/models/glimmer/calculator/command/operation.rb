@@ -1,5 +1,5 @@
 module Glimmer
-  class ScientificCalculator
+  class Calculator
     class Command
       class Operation < Command
         # Calculate operation result using number1 and number2 attributes

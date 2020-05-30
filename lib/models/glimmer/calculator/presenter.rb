@@ -1,7 +1,7 @@
-require 'models/glimmer/scientific_calculator/command'
+require 'models/glimmer/calculator/command'
 
 module Glimmer
-  class ScientificCalculator
+  class Calculator
     class Presenter
       attr_accessor :result
       

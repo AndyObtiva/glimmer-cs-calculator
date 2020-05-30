@@ -1,5 +1,5 @@
 module Glimmer
-  class ScientificCalculator
+  class Calculator
     class Command
       class Number < Command
         keywords ('0'..'9').to_a

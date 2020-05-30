@@ -1,5 +1,5 @@
 module Glimmer
-  class ScientificCalculator
+  class Calculator
     class Command
       class Equals < Command
         keyword '='
