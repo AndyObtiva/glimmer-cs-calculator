@@ -23,7 +23,7 @@ module Glimmer
       @button_font = {height: 14}
       @button_font_operation = {height: 18}
       @button_font_big = {height: 28}
-      Display.setAppName('Calculator')
+      Display.setAppName('Glimmer Calculator')
       @display = display {
         on_event_keydown { |key_event|
           char = key_event.character.chr rescue nil
@@ -65,12 +65,6 @@ module Glimmer
           }
           editable false
           caret nil
-          on_mouse_up { |event|
-            event.widget.selectAll
-          }
-          on_focus_lost { |event|
-            event.widget.setSelection(0, 0)
-          }
         }
         button {
           text 'AC'

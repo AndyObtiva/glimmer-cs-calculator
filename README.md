@@ -1,7 +1,7 @@
-# Calculator - Glimmer Custom Shell
+# <img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" width="60" /> Calculator - Glimmer Custom Shell
 [![Gem Version](https://badge.fury.io/rb/glimmer-cs-calculator.svg)](http://badge.fury.io/rb/glimmer-cs-calculator)
 
-![Calculator](glimmer-cs-calculator.png)
+![Calculator](glimmer-cs-calculator-screenshot.png)
 
 Calculator sample desktop GUI application built with [Glimmer](https://github.com/AndyObtiva/glimmer) (Ruby Desktop Development Library).
 
@@ -12,7 +12,7 @@ Follows the MVP architectural pattern (Model View Presenter) thanks to [Glimmer 
 
 ## Platforms
 
-- Mac ([download]()): Tested and [packaged](https://github.com/AndyObtiva/glimmer#packaging--distribution) for the Mac.
+- Mac: Tested and [packaged](https://github.com/AndyObtiva/glimmer#packaging--distribution) for the Mac. ([Download Here<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" width="30" />](https://www.dropbox.com/s/tdgwt2vfxfh13ro/Glimmer%20Calculator-1.0.0.dmg?dl=1))
 - Linux: Not tested/packaged for Linux, but should work by following setup instructions below.
 - Windows: Not tested/packaged for Windows, but should work by following setup instructions below.
 

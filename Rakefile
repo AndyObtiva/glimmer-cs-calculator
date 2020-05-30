@@ -54,9 +54,9 @@ end
 
 require 'glimmer/rake_task'
 Glimmer::Package.javapackager_extra_args =
-  " -name 'Calculator'" +
-  " -title 'Calculator'" +
-  " -Bmac.CFBundleName='Calculator'" +
+  " -name 'Glimmer Calculator'" +
+  " -title 'Glimmer Calculator'" +
+  " -Bmac.CFBundleName='Glimmer Calculator'" +
   " -Bmac.CFBundleIdentifier='org.glimmer.application.calculator'" 
   # " -BlicenseType=" +
   # " -Bmac.category=" +
