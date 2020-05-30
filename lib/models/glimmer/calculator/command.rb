@@ -29,7 +29,7 @@ module Glimmer
       
         def for(button)
           command_class = keyword_to_command_class_mapping[button]
-          command_class.new(button).tap do |command|
+          command_class&.new(button)&.tap do |command|
             command.execute
             command_history << command
           end

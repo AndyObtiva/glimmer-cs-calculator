@@ -2,8 +2,6 @@ require 'easily_typable'
 
 require 'models/glimmer/calculator/presenter'
 
-# TODO support keyboard input via display filters
-
 module Glimmer
   class Calculator
     include Glimmer::UI::CustomShell
@@ -22,6 +20,13 @@ module Glimmer
       @button_font = {height: 14}
       @button_font_operation = {height: 18}
       @button_font_big = {height: 28}
+      Display.setAppName('Calculator')
+      @display = display {
+        on_event_keydown { |key_event|
+          char = key_event.character.chr rescue nil
+          @presenter.press(char)
+        }
+      }
     }
 
     ## Uncomment after_body block to setup observers for widgets in body

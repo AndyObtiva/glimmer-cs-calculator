@@ -2,7 +2,7 @@ module Glimmer
   class Calculator
     class Command
       class Equals < Command
-        keyword '='
+        keywords '=', "\r"
 
         def execute
           self.result = operation.calculate.to_s            

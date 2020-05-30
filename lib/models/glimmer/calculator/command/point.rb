@@ -5,7 +5,7 @@ module Glimmer
         keyword '.'
 
         def execute          
-          self.result = last_result.nil? || !last_command.is_a?(Number) ? '0.' : "#{last_result}."
+          self.result = last_result.nil? || !last_command.number? ? '0.' : "#{last_result}."
           if operation.nil? || last_command.equals?
             self.number1 = self.result
             self.number2 = nil
