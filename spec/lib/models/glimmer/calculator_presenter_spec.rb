@@ -8,6 +8,13 @@ describe Glimmer::Calculator::Presenter do
     
     it 'adds numbers' do
       expect(subject.result).to eq('0')
+
+      # ensure it works even if no number is entered first
+      subject.press('+')
+      expect(subject.result).to eq('0')
+      subject.press('=')
+      expect(subject.result).to eq('0')
+
       subject.press('1')
       expect(subject.result).to eq('1')
       subject.press('+')
@@ -56,6 +63,13 @@ describe Glimmer::Calculator::Presenter do
     
     it 'subtracts numbers' do
       expect(subject.result).to eq('0')
+
+      # ensure it works even if no number is entered first
+      subject.press('-')
+      expect(subject.result).to eq('0')
+      subject.press('=')
+      expect(subject.result).to eq('0')
+
       subject.press('6')
       expect(subject.result).to eq('6')
       subject.press('5')
@@ -114,6 +128,13 @@ describe Glimmer::Calculator::Presenter do
     
     it 'multiplies numbers' do
       expect(subject.result).to eq('0')
+
+      # ensure it works even if no number is entered first
+      subject.press('*')
+      expect(subject.result).to eq('0')
+      subject.press('=')
+      expect(subject.result).to eq('0')
+
       subject.press('1')
       expect(subject.result).to eq('1')
       subject.press('0')
@@ -164,6 +185,13 @@ describe Glimmer::Calculator::Presenter do
     
     it 'divides numbers' do
       expect(subject.result).to eq('0')
+
+      # ensure it works even if no number is entered first
+      subject.press('/')
+      expect(subject.result).to eq('0')
+      subject.press('=')
+      expect(subject.result).to eq('Not a number')
+
       subject.press('3')
       expect(subject.result).to eq('3')
       subject.press('6')

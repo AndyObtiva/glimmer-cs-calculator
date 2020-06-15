@@ -25,6 +25,13 @@ module Glimmer
       @button_font_big = {height: 28}
       Display.setAppName('Glimmer Calculator')
       @display = display {
+        on_about {
+          display_about_dialog
+        }
+        on_preferences {
+          # No need for preferences. Just display about dialog.
+          display_about_dialog
+        }
         on_event_keydown { |key_event|
           char = key_event.character.chr rescue nil
           @presenter.press(char)
@@ -47,13 +54,6 @@ module Glimmer
         minimum_size 320, 240
         text "Glimmer - Calculator"
         grid_layout 4, true
-        on_about {
-          display_about_dialog
-        }
-        on_preferences {
-          # No need for preferences. Just display about dialog.
-          display_about_dialog
-        }
         # Setting styled_text to multi in order for alignment options to activate
         styled_text(:multi, :wrap, :border) {
           text bind(@presenter, :result)

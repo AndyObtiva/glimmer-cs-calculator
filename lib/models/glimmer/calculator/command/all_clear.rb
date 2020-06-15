@@ -2,7 +2,7 @@ module Glimmer
   class Calculator
     class Command
       class AllClear < Command
-        keywords 'AC', 'c', 'C', 27.chr
+        keywords 'AC', 'c', 'C', 8.chr, 27.chr, 127.chr
 
         def execute
           self.result = '0'

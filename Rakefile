@@ -23,7 +23,7 @@ Jeweler::Tasks.new do |gem|
   gem.email = "andy.am@gmail.com"
   gem.authors = ["Andy Maleh"]
   gem.files = Dir['VERSION', 'LICENSE.txt', 'lib/**/*.rb', 'bin/**/*']
-  gem.executables = ['calculator']  
+  gem.executables = ['glimmer-cs-calculator', 'calculator']
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
