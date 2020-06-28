@@ -1,9 +1,10 @@
-# <img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" width="60" /> Calculator - Glimmer Custom Shell
+# <img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" width="60" /> Glimmer Calculator
+## [Glimmer Custom Shell](https://github.com/AndyObtiva/glimmer#custom-shell-gem)
 [![Gem Version](https://badge.fury.io/rb/glimmer-cs-calculator.svg)](http://badge.fury.io/rb/glimmer-cs-calculator)
 
 ![Calculator](glimmer-cs-calculator-screenshot.png)
 
-Calculator sample desktop GUI application built with [Glimmer](https://github.com/AndyObtiva/glimmer) (Ruby Desktop Development Library).
+Glimmer Calculator is a sample desktop GUI application built with [Glimmer](https://github.com/AndyObtiva/glimmer) (Ruby Desktop Development Library).
 
 It is developed test-first following TDD (Test Driven Development). 
 Design Patterns discovered in the process were Presenter/Facade and Command Pattern.
