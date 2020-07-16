@@ -15,7 +15,7 @@ Follows the MVP architectural pattern (Model View Presenter) thanks to [Glimmer 
 
 ## Platforms
 
-- Mac: Tested and [packaged](https://github.com/AndyObtiva/glimmer#packaging--distribution) for the Mac. ([<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=85 />Download Here](https://www.dropbox.com/s/3fwq5cpetr99f45/Glimmer%20Calculator-1.0.2.dmg?dl=1))
+- Mac: Tested and [packaged](https://github.com/AndyObtiva/glimmer#packaging--distribution) for the Mac. ([Download Here](https://www.dropbox.com/s/3fwq5cpetr99f45/Glimmer%20Calculator-1.0.2.dmg?dl=1))
 - Linux: Not tested/packaged for Linux, but should work by following setup instructions below.
 - Windows: Not tested/packaged for Windows, but should work by following setup instructions below.
 
