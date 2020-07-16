@@ -1,4 +1,4 @@
-# <img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" width="60" /> Glimmer Calculator
+# <img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=85 /> Glimmer Calculator
 ## [Glimmer Custom Shell](https://github.com/AndyObtiva/glimmer#custom-shell-gem)
 [![Gem Version](https://badge.fury.io/rb/glimmer-cs-calculator.svg)](http://badge.fury.io/rb/glimmer-cs-calculator)
 
