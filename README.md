@@ -13,7 +13,7 @@ Follows the MVP architectural pattern (Model View Presenter) thanks to [Glimmer 
 
 ## Platforms
 
-- Mac: Tested and [packaged](https://github.com/AndyObtiva/glimmer#packaging--distribution) for the Mac. ([Download Here<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" width="30" />](https://www.dropbox.com/s/3fwq5cpetr99f45/Glimmer%20Calculator-1.0.1.dmg?dl=1))
+- Mac: Tested and [packaged](https://github.com/AndyObtiva/glimmer#packaging--distribution) for the Mac. ([Download Here<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" width="30" />](https://www.dropbox.com/s/3fwq5cpetr99f45/Glimmer%20Calculator-1.0.2.dmg?dl=1))
 - Linux: Not tested/packaged for Linux, but should work by following setup instructions below.
 - Windows: Not tested/packaged for Windows, but should work by following setup instructions below.
 
@@ -44,7 +44,7 @@ To reuse Calculator as a Glimmer Custom Shell inside another Glimmer application
 following to the application's `Gemfile`:
 
 ```
-gem 'glimmer-cs-calculator', '1.0.1'
+gem 'glimmer-cs-calculator', '1.0.2'
 ```
 
 Run:
@@ -57,6 +57,7 @@ And, then instantiate the Calculator custom shell in your Glimmer application vi
 
 ## Change Log
 
+- 1.0.2: Relaxed dependency on glimmer-dsl-swt (>= 0.1.1 < 2.0.0) / updated logo / used new Glimmer `message_box` keyword syntax
 - 1.0.1: Upgraded to glimmer-dsl-swt v0.1.1 / added delete/backspace shortcut for AC / fixed issues with pressing operations without any number
 - 1.0.0: Initial calculator implementation
 

@@ -246,12 +246,10 @@ module Glimmer
     }
 
     def display_about_dialog
-      message_box = MessageBox.new(swt_widget)
-      message_box.setText("About")
-      message = "Glimmer - Calculator #{VERSION}\n"
-      message += LICENSE
-      message_box.setMessage(message)
-      message_box.open
+      message_box(body_root) {
+        text 'About'
+        message "Glimmer - Calculator #{VERSION}\n#{LICENSE}"
+      }.open
     end
 
   end
