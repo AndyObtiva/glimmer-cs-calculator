@@ -1,5 +1,5 @@
 # <img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=85 /> Glimmer Calculator
-## [Glimmer Custom Shell](https://github.com/AndyObtiva/glimmer#custom-shell-gem)
+## [<img src="https://raw.githubusercontent.com/AndyObtiva/glimmer/master/images/glimmer-logo-hi-res.png" height=40 /> Glimmer Custom Shell](https://github.com/AndyObtiva/glimmer#custom-shell-gem)
 [![Gem Version](https://badge.fury.io/rb/glimmer-cs-calculator.svg)](http://badge.fury.io/rb/glimmer-cs-calculator)
 
 ![Calculator](glimmer-cs-calculator-screenshot.png)
@@ -75,5 +75,10 @@ And, then instantiate the Calculator custom shell in your Glimmer application vi
 
 ## Copyright
 
-Copyright (c) 2020 Andy Maleh. See LICENSE.txt for
-further details.
+[MIT](https://opensource.org/licenses/MIT)
+
+Copyright (c) 2020 Andy Maleh. See [LICENSE.txt](LICENSE.txt) for further details.
+
+--
+
+[<img src="https://raw.githubusercontent.com/AndyObtiva/glimmer/master/images/glimmer-logo-hi-res.png" height=40 />](https://github.com/AndyObtiva/glimmer) Built for [Glimmer](https://github.com/AndyObtiva/glimmer) (Ruby Desktop Development GUI Library)
