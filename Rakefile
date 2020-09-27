@@ -22,7 +22,7 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{Calculator - Glimmer Custom Shell}
   gem.email = "andy.am@gmail.com"
   gem.authors = ["Andy Maleh"]
-  gem.files = Dir['VERSION', 'LICENSE.txt', 'lib/**/*.rb', 'bin/**/*']
+  gem.files = Dir['VERSION', 'LICENSE.txt', 'CHANGELOG.md', 'README.md', 'glimmer-cs-calculator.gemspec', 'lib/**/*.rb', 'bin/**/*']
   gem.executables = ['glimmer-cs-calculator', 'calculator']
   # dependencies defined in Gemfile
 end
@@ -32,7 +32,7 @@ require 'rspec/core'
 require 'rspec/core/rake_task'
 RSpec::Core::RakeTask.new(:spec) do |spec|
   spec.pattern = FileList['spec/**/*_spec.rb']
-  spec.ruby_opts = [Glimmer::Launcher.jruby_swt_options]
+  spec.ruby_opts = [Glimmer::Launcher.jruby_os_specific_options]
 end
 
 desc "Code coverage detail"
@@ -54,11 +54,11 @@ Rake::RDocTask.new do |rdoc|
 end
 
 require 'glimmer/rake_task'
-Glimmer::Package.javapackager_extra_args =
+Glimmer::RakeTask::Package.javapackager_extra_args =
   " -name 'Glimmer Calculator'" +
   " -title 'Glimmer Calculator'" +
   " -Bmac.CFBundleName='Glimmer Calculator'" +
-  " -Bmac.CFBundleIdentifier='org.glimmer.application.calculator'" 
+  " -Bmac.CFBundleIdentifier='org.glimmer.application.Calculator'" 
   # " -BlicenseType=" +
   # " -Bmac.category=" +
   # " -Bmac.signing-key-developer-id-app="

@@ -32,7 +32,7 @@ module Glimmer
           # No need for preferences. Just display about dialog.
           display_about_dialog
         }
-        on_event_keydown { |key_event|
+        on_swt_keydown { |key_event|
           char = key_event.character.chr rescue nil
           @presenter.press(char)
         }

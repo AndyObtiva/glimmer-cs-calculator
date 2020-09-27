@@ -1,21 +1,21 @@
 # <img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=85 /> Glimmer Calculator
-## [<img src="https://raw.githubusercontent.com/AndyObtiva/glimmer/master/images/glimmer-logo-hi-res.png" height=40 /> Glimmer Custom Shell](https://github.com/AndyObtiva/glimmer#custom-shell-gem)
+## [<img src="https://raw.githubusercontent.com/AndyObtiva/glimmer/master/images/glimmer-logo-hi-res.png" height=40 /> Glimmer Custom Shell](https://github.com/AndyObtiva/glimmer-dsl-swt#custom-shell-gem)
 [![Gem Version](https://badge.fury.io/rb/glimmer-cs-calculator.svg)](http://badge.fury.io/rb/glimmer-cs-calculator)
 
 ![Calculator](glimmer-cs-calculator-screenshot.png)
 
-Glimmer Calculator is a sample desktop GUI application built with [Glimmer](https://github.com/AndyObtiva/glimmer) (Ruby Desktop Development Library).
+Glimmer Calculator is a sample desktop GUI application built with [Glimmer DSL for SWT](https://github.com/AndyObtiva/glimmer-dsl-swt) (JRuby Desktop Development GUI Library).
 
 It is developed test-first following TDD (Test Driven Development). 
 Design Patterns discovered in the process were Presenter/Facade and Command Pattern.
 
-Follows the MVP architectural pattern (Model View Presenter) thanks to [Glimmer data-binding](https://github.com/AndyObtiva/glimmer#data-binding) support.
+Follows the MVP architectural pattern (Model View Presenter) thanks to [Glimmer data-binding](https://github.com/AndyObtiva/glimmer-dsl-swt#data-binding) support.
 
-[<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=40 />Download Glimmer Calculator v1.0.2 for the Mac](https://www.dropbox.com/s/3fwq5cpetr99f45/Glimmer%20Calculator-1.0.2.dmg?dl=1)
+[<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=40 />Download Glimmer Calculator v1.1.0 for the Mac](https://www.dropbox.com/s/6c39vunxmx1eztz/Glimmer%20Calculator-1.1.0.dmg?dl=1)
 
 ## Platforms
 
-- Mac: Tested and [packaged](https://github.com/AndyObtiva/glimmer#packaging--distribution) for the Mac. ([Download Here](https://www.dropbox.com/s/3fwq5cpetr99f45/Glimmer%20Calculator-1.0.2.dmg?dl=1))
+- Mac: Tested and [packaged](https://github.com/AndyObtiva/glimmer-dsl-swt#packaging--distribution) for the Mac. ([Download Here](https://www.dropbox.com/s/6c39vunxmx1eztz/Glimmer%20Calculator-1.1.0.dmg?dl=1))
 - Linux: Not tested/packaged for Linux, but should work by following setup instructions below.
 - Windows: Not tested/packaged for Windows, but should work by following setup instructions below.
 
@@ -46,7 +46,7 @@ To reuse Calculator as a Glimmer Custom Shell inside another Glimmer application
 following to the application's `Gemfile`:
 
 ```
-gem 'glimmer-cs-calculator', '1.0.2'
+gem 'glimmer-cs-calculator', '1.1.0'
 ```
 
 Run:
@@ -57,11 +57,13 @@ jruby -S bundle
 
 And, then instantiate the Calculator custom shell in your Glimmer application via the `calculator` Glimmer DSL keyword.
 
+## Feature Suggestions
+
+[TODO.md](TODO.md)
+
 ## Change Log
 
-- 1.0.2: Relaxed dependency on glimmer-dsl-swt (>= 0.1.1 < 2.0.0) / updated logo / used new Glimmer `message_box` keyword syntax
-- 1.0.1: Upgraded to glimmer-dsl-swt v0.1.1 / added delete/backspace shortcut for AC / fixed issues with pressing operations without any number
-- 1.0.0: Initial calculator implementation
+[CHANGELOG.md](CHANGELOG.md)
 
 ## Contributing to glimmer-cs-calculator
  
@@ -81,4 +83,6 @@ Copyright (c) 2020 Andy Maleh. See [LICENSE.txt](LICENSE.txt) for further detail
 
 --
 
-[<img src="https://raw.githubusercontent.com/AndyObtiva/glimmer/master/images/glimmer-logo-hi-res.png" height=40 />](https://github.com/AndyObtiva/glimmer) Built with [Glimmer](https://github.com/AndyObtiva/glimmer) (Ruby Desktop Development GUI Library)
+[<img src="https://raw.githubusercontent.com/AndyObtiva/glimmer/master/images/glimmer-logo-hi-res.png" height=40 />](https://github.com/AndyObtiva/glimmer) Built with [Glimmer DSL for SWT](https://github.com/AndyObtiva/glimmer-dsl-swt) (JRuby Desktop Development GUI Library)
+
+Gladiator icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
