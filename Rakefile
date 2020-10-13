@@ -22,7 +22,7 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{Calculator - Glimmer Custom Shell}
   gem.email = "andy.am@gmail.com"
   gem.authors = ["Andy Maleh"]
-  gem.files = Dir['VERSION', 'LICENSE.txt', 'CHANGELOG.md', 'README.md', 'glimmer-cs-calculator.gemspec', 'lib/**/*.rb', 'bin/**/*']
+  gem.files = Dir['VERSION', 'LICENSE.txt', 'CHANGELOG.md', 'README.md', 'glimmer-cs-calculator.gemspec', 'lib/**/*.rb', 'bin/**/*', 'package/**/*']
   gem.executables = ['glimmer-cs-calculator', 'calculator']
   # dependencies defined in Gemfile
 end
@@ -57,6 +57,7 @@ require 'glimmer/rake_task'
 Glimmer::RakeTask::Package.javapackager_extra_args =
   " -name 'Glimmer Calculator'" +
   " -title 'Glimmer Calculator'" +
+  " -Bwin.menuGroup='Glimmer Calculator'" +
   " -Bmac.CFBundleName='Glimmer Calculator'" +
   " -Bmac.CFBundleIdentifier='org.glimmer.application.Calculator'" 
   # " -BlicenseType=" +

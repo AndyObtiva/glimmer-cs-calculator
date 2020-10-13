@@ -6,6 +6,7 @@ module Glimmer
   class Calculator
     include Glimmer::UI::CustomShell
 
+    APP_ROOT = File.expand_path('../../../..', __FILE__)
     VERSION = File.read(File.expand_path(File.join('..', '..', '..', '..', 'VERSION'), __FILE__))
     LICENSE = File.read(File.expand_path(File.join('..', '..', '..', '..', 'LICENSE.txt'), __FILE__))
 
@@ -50,7 +51,8 @@ module Glimmer
     #
     body {
       shell {
-        minimum_size 320, 240
+        minimum_size (OS.windows? ? 390 : 320), 240
+        image File.join(APP_ROOT, 'package', 'windows', "Glimmer Calculator.ico") if OS.windows?
         text "Glimmer - Calculator"
         grid_layout 4, true
         # Setting styled_text to multi in order for alignment options to activate

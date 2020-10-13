@@ -2,7 +2,13 @@
 ## [<img src="https://raw.githubusercontent.com/AndyObtiva/glimmer/master/images/glimmer-logo-hi-res.png" height=40 /> Glimmer Custom Shell](https://github.com/AndyObtiva/glimmer-dsl-swt#custom-shell-gem)
 [![Gem Version](https://badge.fury.io/rb/glimmer-cs-calculator.svg)](http://badge.fury.io/rb/glimmer-cs-calculator)
 
+Glimmer Calculator on Mac
+
 ![Calculator](glimmer-cs-calculator-screenshot.png)
+
+Glimmer Calculator on Windows
+
+![Calculator](glimmer-cs-calculator-screenshot-windows.png)
 
 Glimmer Calculator is a sample desktop GUI application built with [Glimmer DSL for SWT](https://github.com/AndyObtiva/glimmer-dsl-swt) (JRuby Desktop Development GUI Library).
 
