@@ -7,3 +7,5 @@ These are some feature suggestions:
 - Support copy/paste of result
 - Add an Edit menu with Copy/Cut/Paste
 - Support CMD+C and CMD+X and CMD+V shortcuts for copy, cut, and paste
+- Webify with Glimmer DSL for Opal in a Rails application
+- Host Glimmer DSL for Opal Rails application on Heroku

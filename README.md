@@ -6,12 +6,17 @@
 
 Glimmer Calculator is a sample desktop GUI application built with [Glimmer DSL for SWT](https://github.com/AndyObtiva/glimmer-dsl-swt) (JRuby Desktop Development GUI Library).
 
-It is developed test-first following TDD (Test Driven Development). 
+Architectural Pattern is MVP (Model View Presenter) thanks to [Glimmer data-binding](https://github.com/AndyObtiva/glimmer-dsl-swt#data-binding) support.
+
+Glimmer Calculator was developed test-first following TDD (Test Driven Development) after [Glimmer Scaffolding](https://github.com/AndyObtiva/glimmer-dsl-swt#scaffolding). 
+
 Design Patterns discovered in the process were Presenter/Facade and Command Pattern.
 
-Follows the MVP architectural pattern (Model View Presenter) thanks to [Glimmer data-binding](https://github.com/AndyObtiva/glimmer-dsl-swt#data-binding) support.
+Here are the calculator commands under the [models directory](lib/models/glimmer/calculator):
 
-[<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=40 />Download Glimmer Calculator v1.1.0 for the Mac](https://www.dropbox.com/s/6c39vunxmx1eztz/Glimmer%20Calculator-1.1.0.dmg?dl=1)
+![Calculator Commands](glimmer-cs-calculator-command-pattern.png)
+
+[<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=40 />Download Glimmer Calculator v1.2.0 for the Mac](https://www.dropbox.com/s/6c39vunxmx1eztz/Glimmer%20Calculator-1.1.0.dmg?dl=1)
 
 ## Platforms
 
@@ -46,7 +51,7 @@ To reuse Calculator as a Glimmer Custom Shell inside another Glimmer application
 following to the application's `Gemfile`:
 
 ```
-gem 'glimmer-cs-calculator', '1.1.0'
+gem 'glimmer-cs-calculator', '1.2.0'
 ```
 
 Run:
