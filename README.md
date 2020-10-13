@@ -16,7 +16,7 @@ Here are the calculator commands under the [models directory](lib/models/glimmer
 
 ![Calculator Commands](glimmer-cs-calculator-command-pattern.png)
 
-[<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=40 />Download Glimmer Calculator v1.2.0 for the Mac](https://www.dropbox.com/s/6c39vunxmx1eztz/Glimmer%20Calculator-1.1.0.dmg?dl=1)
+[<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=40 />Download Glimmer Calculator v1.1.1 for the Mac](https://www.dropbox.com/s/6c39vunxmx1eztz/Glimmer%20Calculator-1.1.0.dmg?dl=1)
 
 ## Platforms
 
@@ -51,7 +51,7 @@ To reuse Calculator as a Glimmer Custom Shell inside another Glimmer application
 following to the application's `Gemfile`:
 
 ```
-gem 'glimmer-cs-calculator', '1.2.0'
+gem 'glimmer-cs-calculator', '1.1.1'
 ```
 
 Run:

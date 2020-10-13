@@ -50,7 +50,6 @@ module Glimmer
     #
     body {
       shell {
-        # Replace example content below with custom shell content
         minimum_size 320, 240
         text "Glimmer - Calculator"
         grid_layout 4, true
@@ -66,184 +65,54 @@ module Glimmer
           editable false
           caret nil
         }
-        button {
-          text 'AC'
-          font @button_font
-          
-          layout_data(:fill, :fill, true, true)
-          
-          on_widget_selected {
-            @presenter.press('AC')
-          }
+        command_button('AC')
+        operation_button('÷')
+        operation_button('×')
+        operation_button('−')
+        (7..9).each { |number|
+          number_button(number)
         }
-        button {
-          text '÷'
-          font @button_font_operation
-          
-          layout_data(:fill, :fill, true, true)
-          
-          on_widget_selected {
-            @presenter.press('/')
-          }
-        }
-        button {
-          text '×'
-          font @button_font_operation
-          
-          layout_data(:fill, :fill, true, true)
-          
-          on_widget_selected {
-            @presenter.press('*')
-          }
-        }
-        button {
-          text '−'
-          font @button_font_operation
-          
-          layout_data(:fill, :fill, true, true)
-          
-          on_widget_selected {
-            @presenter.press('-')
-          }
-        }
-        button {
-          text '7'
-          font @button_font
-          
-          layout_data(:fill, :fill, true, true)
-          
-          on_widget_selected {
-            @presenter.press('7')
-          }
-        }
-        button {
-          text '8'
-          font @button_font
-          
-          layout_data(:fill, :fill, true, true)
-          
-          on_widget_selected {
-            @presenter.press('8')
-          }
-        }
-        button {
-          text '9'
-          font @button_font
-          
-          layout_data(:fill, :fill, true, true)
-          
-          on_widget_selected {
-            @presenter.press('9')
-          }
-        }
-        button {
-          text '+'
-          font @button_font_big
-          
-          layout_data(:fill, :fill, true, true) {          
-            vertical_span 2
-          }
-          
-          on_widget_selected {
-            @presenter.press('+')
-          }
-        }
-        button {
-          text '4'
-          font @button_font
-          
-          layout_data(:fill, :fill, true, true)
-          
-          on_widget_selected {
-            @presenter.press('4')
-          }
-        }
-        button {
-          text '5'
-          font @button_font
-          
-          layout_data(:fill, :fill, true, true)
-          
-          on_widget_selected {
-            @presenter.press('5')
-          }
-        }
-        button {
-          text '6'
-          font @button_font
-          
-          layout_data(:fill, :fill, true, true)
-          
-          on_widget_selected {
-            @presenter.press('6')
-          }
-        }
-        button {
-          text '1'
-          font @button_font
-          
-          layout_data(:fill, :fill, true, true)
-          
-          on_widget_selected {
-            @presenter.press('1')
-          }
-        }
-        button {
-          text '2'
-          font @button_font
-          
-          layout_data(:fill, :fill, true, true)
-          
-          on_widget_selected {
-            @presenter.press('2')
-          }
-        }
-        button {
-          text '3'
-          font @button_font
-          
-          layout_data(:fill, :fill, true, true)
-          
-          on_widget_selected {
-            @presenter.press('3')
-          }
-        }
-        button {
-          text '='
-          font @button_font_big
-          
-          layout_data(:fill, :fill, true, true) {          
-            vertical_span 2
-          }
-          
-          on_widget_selected {
-            @presenter.press('=')
-          }
-        }
-        button {
-          text '0'
-          font @button_font
-          
-          layout_data(:fill, :fill, true, true) {          
-            horizontal_span 2
-          }
-          
-          on_widget_selected {
-            @presenter.press('0')
-          }
-        }
-        button {
-          text '.'
-          font @button_font_operation
-          
-          layout_data(:fill, :fill, true, true)
-          
-          on_widget_selected {
-            @presenter.press('.')
-          }
-        }
+        operation_button('+', font: @button_font_big, vertical_span: 2)
+        (4..6).each { |number|
+          number_button(number)
+        }        
+        (1..3).each { |number|
+          number_button(number)
+        }        
+        command_button('=', font: @button_font_big, vertical_span: 2)
+        number_button(0, horizontal_span: 2)
+        operation_button('.')
       }
     }
+    
+    def number_button(number, options = {})
+      command_button(number, options)
+    end
+    
+    def operation_button(operation, options = {})
+      command_button(operation, options.merge(font: @button_font_operation))
+    end
+    
+    def command_button(command, options = {})
+      command = command.to_s
+      options[:font] ||= @button_font
+      options[:horizontal_span] ||= 1
+      options[:vertical_span] ||= 1
+      
+      button { |proxy|
+        text command
+        font options[:font]
+        
+        layout_data(:fill, :fill, true, true) {
+          horizontal_span options[:horizontal_span]
+          vertical_span options[:vertical_span]
+        }
+        
+        on_widget_selected {
+          @presenter.press(command)
+        }
+      }    
+    end
 
     def display_about_dialog
       message_box(body_root) {

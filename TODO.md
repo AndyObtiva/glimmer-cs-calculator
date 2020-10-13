@@ -9,3 +9,4 @@ These are some feature suggestions:
 - Support CMD+C and CMD+X and CMD+V shortcuts for copy, cut, and paste
 - Webify with Glimmer DSL for Opal in a Rails application
 - Host Glimmer DSL for Opal Rails application on Heroku
+- Support operator precedences like doing 1 + 9 * 8 (expected: 73 since * takes precedence over +)
