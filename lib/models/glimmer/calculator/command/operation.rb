@@ -13,7 +13,7 @@ module Glimmer
         end
         
         def calculate
-          calculation_result = number1.send(operation_method, number2)
+          calculation_result = BigDecimal.new(number1.to_s).send(operation_method, BigDecimal.new(number2.to_s)).to_f
           calculation_result.to_s.match(/\.0+$/) ? calculation_result.to_i : calculation_result
         end
         

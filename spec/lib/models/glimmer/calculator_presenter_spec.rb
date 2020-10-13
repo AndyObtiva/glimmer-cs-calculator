@@ -181,6 +181,20 @@ describe Glimmer::Calculator::Presenter do
       expect(subject.result).to eq('3')
       subject.press('=')
       expect(subject.result).to eq('60')
+      
+      # fractions
+      subject.press('0')
+      expect(subject.result).to eq('0')
+      subject.press('.')
+      expect(subject.result).to eq('0.')
+      subject.press('3')
+      expect(subject.result).to eq('0.3')
+      subject.press('*')
+      expect(subject.result).to eq('0.3')
+      subject.press('3')
+      expect(subject.result).to eq('3')
+      subject.press('=')
+      expect(subject.result).to eq('0.9')
     end
     
     it 'divides numbers' do
