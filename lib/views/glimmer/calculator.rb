@@ -51,7 +51,7 @@ module Glimmer
     #
     body {
       shell {
-        minimum_size (OS.windows? ? 390 : 320), 240
+        minimum_size (OS.mac? ? 320 : (OS.windows? ? 390 : 520)), 240
         image File.join(APP_ROOT, 'package', 'windows', "Glimmer Calculator.ico") if OS.windows?
         text "Glimmer - Calculator"
         grid_layout 4, true

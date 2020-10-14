@@ -10,6 +10,10 @@ Glimmer Calculator on Windows
 
 ![Calculator](glimmer-cs-calculator-screenshot-windows.png)
 
+Glimmer Calculator on Linux
+
+![Calculator](glimmer-cs-calculator-screenshot-linux.png)
+
 Glimmer Calculator is a sample desktop GUI application built with [Glimmer DSL for SWT](https://github.com/AndyObtiva/glimmer-dsl-swt) (JRuby Desktop Development GUI Library).
 
 Architectural Pattern is MVP (Model View Presenter) thanks to [Glimmer data-binding](https://github.com/AndyObtiva/glimmer-dsl-swt#data-binding) support.
@@ -22,13 +26,17 @@ Here are the calculator commands under the [models directory](lib/models/glimmer
 
 ![Calculator Commands](glimmer-cs-calculator-command-pattern.png)
 
-[<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=40 />Download Glimmer Calculator v1.1.1 for the Mac](https://www.dropbox.com/s/6c39vunxmx1eztz/Glimmer%20Calculator-1.1.0.dmg?dl=1)
+[<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=40 />Download Glimmer Calculator v1.1.1 DMG for Mac](https://www.dropbox.com/s/2wbyy0z0w875n39/Glimmer%20Calculator-1.1.1.dmg?dl=1)
+
+[<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=40 />Download Glimmer Calculator v1.1.1 MSI for Windows](https://www.dropbox.com/s/e8b586s2xgjn9bg/Glimmer%20Calculator-1.1.1.msi?dl=1)
+
+[<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=40 />Download Glimmer Calculator v1.1.1 GEM for Linux](#setup-instructions)
 
 ## Platforms
 
-- Mac: Tested and [packaged](https://github.com/AndyObtiva/glimmer-dsl-swt#packaging--distribution) for the Mac. ([Download Here](https://www.dropbox.com/s/6c39vunxmx1eztz/Glimmer%20Calculator-1.1.0.dmg?dl=1))
-- Linux: Not tested/packaged for Linux, but should work by following setup instructions below.
-- Windows: Not tested/packaged for Windows, but should work by following setup instructions below.
+- Mac: Tested and [packaged](https://github.com/AndyObtiva/glimmer-dsl-swt#packaging--distribution) for Mac. ([Download Here](https://www.dropbox.com/s/2wbyy0z0w875n39/Glimmer%20Calculator-1.1.1.dmg?dl=1))
+- Windows: Tested and [packaged](https://github.com/AndyObtiva/glimmer-dsl-swt#packaging--distribution) for Windows. ([Download Here](https://www.dropbox.com/s/e8b586s2xgjn9bg/Glimmer%20Calculator-1.1.1.msi?dl=1))
+- Linux: Tested and [packaged](http://rubygems.org/gems/glimmer-cs-calculator) for Linux (Follow [setup instructions](#setup-instructions) to install [gem](http://rubygems.org/gems/glimmer-cs-calculator) and run `calculator` command)
 
 ## Development Environment Pre-requisites
 
