@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.1.1
+
+- Official Windows support
+- Official Linux support
+- Refactorings, extracting method-based custom widgets
+
 ## 1.1.0
 
 - Upgrade support for glimmer-dsl-swt to 4.17.2.0 up to 5.0.0.0
