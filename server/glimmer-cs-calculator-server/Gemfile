@@ -39,10 +39,10 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'opal-rails', '~> 1.1.2'
 gem 'opal-async', '~> 1.2.0'
 gem 'opal-jquery', '~> 0.4.4'
-gem 'glimmer-dsl-opal', '~> 0.4.0', require: false, path: '../../../glimmer-dsl-opal'
+gem 'glimmer-dsl-opal', '~> 0.3.0', require: false #, path: '../../../glimmer-dsl-opal'
 gem 'glimmer-dsl-xml', '~> 1.1.0', require: false
 gem 'glimmer-dsl-css', '~> 1.1.0', require: false
-gem 'glimmer-cs-calculator', '~> 1.2.0', require: false, path: '../..'
+gem 'glimmer-cs-calculator', '~> 1.1.1', require: false #, path: '../..'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
