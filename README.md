@@ -14,7 +14,7 @@ Glimmer Calculator on Linux
 
 ![Calculator](glimmer-cs-calculator-screenshot-linux.png)
 
-Glimmer Calculator on [Opal](https://github.com/AndyObtiva/glimmer-dsl-opal) (Web)
+Glimmer Calculator on [Opal](#glimmer-dsl-for-opal) (Web)
 
 ![Calculator](glimmer-cs-calculator-screenshot-opal.png)
 
