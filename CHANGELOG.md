@@ -1,5 +1,9 @@
 # Change Log
 
+## 1.1.3
+
+- Added back the `glimmer-dsl-swt` gem dependency (was mistakenly removed while testing with Glimmer DSL for Opal)
+
 ## 1.1.2
 
 - Official Opal (Web) support via [Glimmer DSL for Opal](https://github.com/AndyObtiva/glimmer-dsl-opal)
