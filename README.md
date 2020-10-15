@@ -36,12 +36,14 @@ Here are the calculator commands under the [models directory](lib/models/glimmer
 
 [<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=40 />Download Glimmer Calculator v1.1.3 GEM for Linux](#setup-instructions)
 
+[<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=40 />Visit Glimmer Calculator v1.1.2 WEB for Opal](https://glimmer-cs-calculator-server.herokuapp.com)
+
 ## Platforms
 
 - Mac: Tested and [packaged](https://github.com/AndyObtiva/glimmer-dsl-swt#packaging--distribution) for Mac. ([Download Here](https://www.dropbox.com/s/2wbyy0z0w875n39/Glimmer%20Calculator-1.1.1.dmg?dl=1))
 - Windows: Tested and [packaged](https://github.com/AndyObtiva/glimmer-dsl-swt#packaging--distribution) for Windows. ([Download Here](https://www.dropbox.com/s/e8b586s2xgjn9bg/Glimmer%20Calculator-1.1.1.msi?dl=1))
 - Linux: Tested and [packaged](http://rubygems.org/gems/glimmer-cs-calculator) for Linux (Follow [setup instructions](#setup-instructions) to install [gem](http://rubygems.org/gems/glimmer-cs-calculator) and run `calculator` command)
-- Opal (Web): Tested with [Glimmer DSL for Opal](https://github.com/AndyObtiva/glimmer-dsl-opal)
+- Opal (Web): Tested with [Glimmer DSL for Opal](https://github.com/AndyObtiva/glimmer-dsl-opal) and [deployed to Heroku](https://glimmer-cs-calculator-server.herokuapp.com). Visit https://glimmer-cs-calculator-server.herokuapp.com
 
 ## Development Environment Pre-requisites
 
@@ -80,6 +82,26 @@ jruby -S bundle
 ```
 
 And, then instantiate the Calculator custom shell in your Glimmer application via the `calculator` Glimmer DSL keyword.
+
+### Glimmer DSL for Opal
+
+The app Rails server lives under: [server/glimmer-cs-calculator-server](server/glimmer-cs-calculator-server)
+
+It is deployed to Heroku at: https://glimmer-cs-calculator-server.herokuapp.com
+
+[Setup instructions](https://github.com/AndyObtiva/glimmer-dsl-opal#setup) from [Glimmer DSL for Opal](https://github.com/AndyObtiva/glimmer-dsl-opal) were followed in creating the Rails server.
+
+This is the content of `app/assets/javascripts/application.rb`:
+
+```ruby
+require 'glimmer-dsl-opal'
+
+Document.ready? do
+  require 'glimmer-cs-calculator/launch'
+end
+```
+
+As you can see, Glimmer Calculator works as is by adding one require statement without needing to change a single line of its code thanks to [Glimmer DSL for Opal](https://github.com/AndyObtiva/glimmer-dsl-opal).
 
 ## Feature Suggestions
 
