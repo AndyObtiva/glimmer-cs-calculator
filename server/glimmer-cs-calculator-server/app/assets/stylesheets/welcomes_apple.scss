@@ -1,0 +1,37 @@
+// Place all the styles related to the welcomes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html body .shell {
+  place-content: center !important;
+  min-height: 320px !important;
+  grid-gap: 0 !important;
+  
+  .styled-text {
+    background: rgb(92, 89, 89) !important;
+    color: white !important;
+    font-size: 50px !important;
+    max-width: 400px !important;
+  }
+  
+  .button {
+    border: 1px solid rgb(92, 89, 89) !important;
+    padding: 0 !important;
+    min-width: 60px !important;
+    min-height: 50px !important;
+    color: white;
+    font-size: 22px !important;
+  }
+
+  #button-1, #button-2, #button-3 {
+    background: rgb(105, 104, 104);
+  }
+  
+  #button-5, #button-6, #button-7, #button-9, #button-10, #button-11, #button-12, #button-13, #button-14, #button-16, #button-17 {
+    background: rgb(129, 128, 128);
+  }
+  
+  #button-4, #button-8, #button-15 {
+    background: rgb(232, 157, 39);
+  }
+}

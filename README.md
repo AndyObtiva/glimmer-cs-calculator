@@ -107,7 +107,17 @@ As you can see, Glimmer Calculator works as is by adding one require statement w
 
 CSS can be applied externally in Rails onto any Rails Route serving an Opal app.
 
+##### Apple Calculator CSS Theme
+
+Visit: http://glimmer-cs-calculator-server.herokuapp.com/welcomes/apple
+
+[server/glimmer-cs-calculator-server/app/assets/stylesheets/welcomes_apple.scss](server/glimmer-cs-calculator-server/app/assets/stylesheets/welcomes_apple.scss)
+
+![Calculator](glimmer-cs-calculator-screenshot-opal-apple.png)
+
 ##### Tiles CSS Theme
+
+Visit: http://glimmer-cs-calculator-server.herokuapp.com/welcomes/tiles
 
 [server/glimmer-cs-calculator-server/app/assets/stylesheets/welcomes_tiles.scss](server/glimmer-cs-calculator-server/app/assets/stylesheets/welcomes_tiles.scss)
 

@@ -12,6 +12,11 @@ class WelcomesController < ApplicationController
     render action: :index
   end
 
+  def apple
+    index
+    render action: :index
+  end
+
   # GET /welcomes/1
   # GET /welcomes/1.json
   def show
