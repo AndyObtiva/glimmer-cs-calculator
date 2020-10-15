@@ -1,16 +1,7 @@
 PATH
-  remote: ../../../glimmer-dsl-opal
-  specs:
-    glimmer-dsl-opal (0.4.0)
-      glimmer (~> 1.0.1)
-      glimmer-dsl-css (~> 1.1.0)
-      glimmer-dsl-xml (~> 1.1.0)
-      opal-async (~> 1.2.0)
-
-PATH
   remote: ../..
   specs:
-    glimmer-cs-calculator (1.2.0)
+    glimmer-cs-calculator (1.1.1)
       easily_typable (~> 1.0.2)
 
 GEM
@@ -100,6 +91,11 @@ GEM
       facets (>= 3.1.0, < 4.0.0)
     glimmer-dsl-css (1.1.0)
       glimmer (>= 1.0.1, < 2.0.0)
+    glimmer-dsl-opal (0.4.0)
+      glimmer (~> 1.0.1)
+      glimmer-dsl-css (~> 1.1.0)
+      glimmer-dsl-xml (~> 1.1.0)
+      opal-async (~> 1.2.0)
     glimmer-dsl-xml (1.1.0)
       glimmer (>= 1.0.1, < 2.0.0)
     globalid (0.4.2)
@@ -248,9 +244,9 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
-  glimmer-cs-calculator (~> 1.2.0)!
+  glimmer-cs-calculator (~> 1.1.1)!
   glimmer-dsl-css (~> 1.1.0)
-  glimmer-dsl-opal (~> 0.4.0)!
+  glimmer-dsl-opal (~> 0.4.0)
   glimmer-dsl-xml (~> 1.1.0)
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)

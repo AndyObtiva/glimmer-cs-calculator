@@ -1,10 +1,13 @@
 # Change Log
 
+## 1.1.2
+
+- Official Opal (Web) support via [Glimmer DSL for Opal](https://github.com/AndyObtiva/glimmer-dsl-opal)
+
 ## 1.1.1
 
 - Official Windows support
 - Official Linux support
-- Official Opal (Web) support via [Glimmer DSL for Opal](https://github.com/AndyObtiva/glimmer-dsl-opal)
 - Refactorings, extracting method-based custom widgets
 
 ## 1.1.0

@@ -1,4 +1,4 @@
-1.1.1g alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=85 /> Glimmer Calculator
+# <img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=85 /> Glimmer Calculator
 ## [<img src="https://raw.githubusercontent.com/AndyObtiva/glimmer/master/images/glimmer-logo-hi-res.png" height=40 /> Glimmer Custom Shell](https://github.com/AndyObtiva/glimmer-dsl-swt#custom-shell-gem)
 [![Gem Version](https://badge.fury.io/rb/glimmer-cs-calculator.svg)](http://badge.fury.io/rb/glimmer-cs-calculator)
 
@@ -34,7 +34,7 @@ Here are the calculator commands under the [models directory](lib/models/glimmer
 
 [<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=40 />Download Glimmer Calculator v1.1.1 MSI for Windows](https://www.dropbox.com/s/e8b586s2xgjn9bg/Glimmer%20Calculator-1.1.1.msi?dl=1)
 
-[<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=40 />Download Glimmer Calculator v1.1.1 GEM for Linux](#setup-instructions)
+[<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=40 />Download Glimmer Calculator v1.1.2 GEM for Linux](#setup-instructions)
 
 ## Platforms
 
@@ -70,7 +70,7 @@ To reuse Calculator as a Glimmer Custom Shell inside another Glimmer application
 following to the application's `Gemfile`:
 
 ```
-gem 'glimmer-cs-calculator', '1.1.1'
+gem 'glimmer-cs-calculator', '1.1.2'
 ```
 
 Run:
