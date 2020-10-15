@@ -86,4 +86,14 @@ module Glimmer
   end
 end
 
-Dir[File.join(File.dirname(__FILE__), 'command', '**', '*.rb')].each {|f| require(f)}
+# Dir[File.join(File.dirname(__FILE__), 'command', '**', '*.rb')].each {|f| require(f)}
+
+require 'models/glimmer/calculator/command/all_clear'
+require 'models/glimmer/calculator/command/equals'
+require 'models/glimmer/calculator/command/number'
+require 'models/glimmer/calculator/command/operation'
+require 'models/glimmer/calculator/command/point'
+require 'models/glimmer/calculator/command/operation/add'
+require 'models/glimmer/calculator/command/operation/divide'
+require 'models/glimmer/calculator/command/operation/multiply'
+require 'models/glimmer/calculator/command/operation/subtract'

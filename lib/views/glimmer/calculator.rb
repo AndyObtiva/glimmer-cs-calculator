@@ -7,8 +7,8 @@ module Glimmer
     include Glimmer::UI::CustomShell
 
     APP_ROOT = File.expand_path('../../../..', __FILE__)
-    VERSION = File.read(File.expand_path(File.join('..', '..', '..', '..', 'VERSION'), __FILE__))
-    LICENSE = File.read(File.expand_path(File.join('..', '..', '..', '..', 'LICENSE.txt'), __FILE__))
+#     VERSION = File.read(File.expand_path(File.join('..', '..', '..', '..', 'VERSION'), __FILE__))
+#     LICENSE = File.read(File.expand_path(File.join('..', '..', '..', '..', 'LICENSE.txt'), __FILE__))
 
     ## Add options like the following to configure CustomShell by outside consumers
     #
@@ -24,20 +24,20 @@ module Glimmer
       @button_font = {height: 14}
       @button_font_operation = {height: 18}
       @button_font_big = {height: 28}
-      Display.setAppName('Glimmer Calculator')
-      @display = display {
-        on_about {
-          display_about_dialog
-        }
-        on_preferences {
-          # No need for preferences. Just display about dialog.
-          display_about_dialog
-        }
-        on_swt_keydown { |key_event|
-          char = key_event.character.chr rescue nil
-          @presenter.press(char)
-        }
-      }
+#       Display.setAppName('Glimmer Calculator')
+#       @display = display {
+#         on_about {
+#           display_about_dialog
+#         }
+#         on_preferences {
+#         # No need for preferences. Just display about dialog.
+#           display_about_dialog
+#         }
+#         on_swt_keydown { |key_event|
+#           char = key_event.character.chr rescue nil
+#           @presenter.press(char)
+#         }
+#       }
     }
 
     ## Uncomment after_body block to setup observers for widgets in body
