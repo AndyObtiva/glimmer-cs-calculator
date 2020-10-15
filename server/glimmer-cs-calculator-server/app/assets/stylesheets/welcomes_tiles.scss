@@ -1,0 +1,42 @@
+// Place all the styles related to the welcomes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html body .shell {  
+  place-content: center !important;
+  min-height: 700px !important;
+  font-family: Arial;
+  
+  &::before {
+    content: 'Glimmer Calculator';
+    text-align: center;
+    display: block;
+    font-size: 50px;
+    grid-column-start: span 4;
+  }
+  
+  .styled-text {
+    color: black !important;
+  }
+
+  .button {
+    border: 5px solid black;
+    min-width: 100px !important;
+    min-height: 100px !important;
+    font-size: 36px !important;
+    background: white !important;
+    
+    &:focus {
+      border: 6px solid black;
+    }
+    
+    &:hover {
+      border: 8px solid black;
+    }
+    
+    &:active {
+      border: 10px solid black;
+      background: lightgrey !important;
+    }
+  }
+}

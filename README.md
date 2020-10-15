@@ -103,6 +103,16 @@ end
 
 As you can see, Glimmer Calculator works as is by adding one require statement without needing to change a single line of its code thanks to [Glimmer DSL for Opal](https://github.com/AndyObtiva/glimmer-dsl-opal).
 
+#### CSS Themes
+
+CSS can be applied externally in Rails onto any Rails Route serving an Opal app.
+
+##### Tiles CSS Theme
+
+[server/glimmer-cs-calculator-server/app/assets/stylesheets/welcomes_tiles.scss](server/glimmer-cs-calculator-server/app/assets/stylesheets/welcomes_tiles.scss)
+
+![Calculator](glimmer-cs-calculator-screenshot-opal-tiles.png)
+
 ## Feature Suggestions
 
 [TODO.md](TODO.md)

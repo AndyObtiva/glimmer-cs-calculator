@@ -7,6 +7,11 @@ class WelcomesController < ApplicationController
     @welcomes = Welcome.all
   end
 
+  def tiles
+    index
+    render action: :index
+  end
+
   # GET /welcomes/1
   # GET /welcomes/1.json
   def show
