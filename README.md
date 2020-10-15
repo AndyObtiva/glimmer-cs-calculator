@@ -14,6 +14,10 @@ Glimmer Calculator on Linux
 
 ![Calculator](glimmer-cs-calculator-screenshot-linux.png)
 
+Glimmer Calculator on [Opal](https://github.com/AndyObtiva/glimmer-dsl-opal) (Web)
+
+![Calculator](glimmer-cs-calculator-screenshot-opal.png)
+
 Glimmer Calculator is a sample desktop GUI application built with [Glimmer DSL for SWT](https://github.com/AndyObtiva/glimmer-dsl-swt) (JRuby Desktop Development GUI Library).
 
 Architectural Pattern is MVP (Model View Presenter) thanks to [Glimmer data-binding](https://github.com/AndyObtiva/glimmer-dsl-swt#data-binding) support.
@@ -37,6 +41,7 @@ Here are the calculator commands under the [models directory](lib/models/glimmer
 - Mac: Tested and [packaged](https://github.com/AndyObtiva/glimmer-dsl-swt#packaging--distribution) for Mac. ([Download Here](https://www.dropbox.com/s/2wbyy0z0w875n39/Glimmer%20Calculator-1.1.1.dmg?dl=1))
 - Windows: Tested and [packaged](https://github.com/AndyObtiva/glimmer-dsl-swt#packaging--distribution) for Windows. ([Download Here](https://www.dropbox.com/s/e8b586s2xgjn9bg/Glimmer%20Calculator-1.1.1.msi?dl=1))
 - Linux: Tested and [packaged](http://rubygems.org/gems/glimmer-cs-calculator) for Linux (Follow [setup instructions](#setup-instructions) to install [gem](http://rubygems.org/gems/glimmer-cs-calculator) and run `calculator` command)
+- Opal (Web): Tested with [Glimmer DSL for Opal](https://github.com/AndyObtiva/glimmer-dsl-opal)
 
 ## Development Environment Pre-requisites
 
