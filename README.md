@@ -16,7 +16,7 @@ Glimmer Calculator on Linux
 
 Glimmer Calculator on [Opal](#glimmer-dsl-for-opal) (Web)
 
-![Calculator](glimmer-cs-calculator-screenshot-opal.png)
+[![Calculator](glimmer-cs-calculator-screenshot-opal.png)](http://glimmer-cs-calculator-server.herokuapp.com)
 
 Glimmer Calculator is a sample desktop GUI application built with [Glimmer DSL for SWT](https://github.com/AndyObtiva/glimmer-dsl-swt) (JRuby Desktop Development GUI Library).
 
@@ -24,7 +24,7 @@ Architectural Pattern is MVP (Model View Presenter) thanks to [Glimmer data-bind
 
 Glimmer Calculator was developed test-first following TDD (Test Driven Development) after [Glimmer Scaffolding](https://github.com/AndyObtiva/glimmer-dsl-swt#scaffolding). 
 
-Design Patterns discovered in the process were Presenter/Facade and Command Pattern.
+Design Patterns discovered in the process were Facade (Presenter) and Command Pattern.
 
 Here are the calculator commands under the [models directory](lib/models/glimmer/calculator):
 
@@ -52,6 +52,8 @@ Here are the calculator commands under the [models directory](lib/models/glimmer
 
 ## Setup Instructions
 
+### Glimmer DSL for SWT
+
 Install Calculator gem by running (`jgem`, `jruby -S gem`, or `gem` directly if you have RVM):
 
 ```
@@ -66,7 +68,7 @@ calculator
 
 Note: If you cloned this project and bundle installed, you may invoke via `bin/calculator` instead. 
 
-### Glimmer Custom Shell Reuse
+#### Glimmer Custom Shell Reuse
 
 To reuse Calculator as a Glimmer Custom Shell inside another Glimmer application, add the 
 following to the application's `Gemfile`:
@@ -103,6 +105,8 @@ end
 
 As you can see, Glimmer Calculator works as is by adding one require statement without needing to change a single line of its code thanks to [Glimmer DSL for Opal](https://github.com/AndyObtiva/glimmer-dsl-opal).
 
+[![Calculator](glimmer-cs-calculator-screenshot-opal.png)](http://glimmer-cs-calculator-server.herokuapp.com)
+
 #### CSS Themes
 
 CSS can be applied externally in Rails onto any Rails Route serving an Opal app.
@@ -113,7 +117,7 @@ Visit: http://glimmer-cs-calculator-server.herokuapp.com/welcomes/apple
 
 [server/glimmer-cs-calculator-server/app/assets/stylesheets/welcomes_apple.scss](server/glimmer-cs-calculator-server/app/assets/stylesheets/welcomes_apple.scss)
 
-![Calculator](glimmer-cs-calculator-screenshot-opal-apple.png)
+[![Calculator](glimmer-cs-calculator-screenshot-opal-apple.png)](http://glimmer-cs-calculator-server.herokuapp.com/welcomes/apple)
 
 ##### Tiles CSS Theme
 
@@ -121,7 +125,7 @@ Visit: http://glimmer-cs-calculator-server.herokuapp.com/welcomes/tiles
 
 [server/glimmer-cs-calculator-server/app/assets/stylesheets/welcomes_tiles.scss](server/glimmer-cs-calculator-server/app/assets/stylesheets/welcomes_tiles.scss)
 
-![Calculator](glimmer-cs-calculator-screenshot-opal-tiles.png)
+[![Calculator](glimmer-cs-calculator-screenshot-opal-tiles.png)](http://glimmer-cs-calculator-server.herokuapp.com/welcomes/tiles)
 
 ## Feature Suggestions
 
@@ -151,4 +155,4 @@ Copyright (c) 2020 Andy Maleh. See [LICENSE.txt](LICENSE.txt) for further detail
 
 [<img src="https://raw.githubusercontent.com/AndyObtiva/glimmer/master/images/glimmer-logo-hi-res.png" height=40 />](https://github.com/AndyObtiva/glimmer) Built with [Glimmer DSL for SWT](https://github.com/AndyObtiva/glimmer-dsl-swt) (JRuby Desktop Development GUI Library)
 
-Gladiator icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+Glimmer Calculator icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
