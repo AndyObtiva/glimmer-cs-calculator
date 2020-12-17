@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-html body .shell {  
+html body .shell {
   place-content: center !important;
   min-height: 700px !important;
   font-family: Arial;
@@ -17,8 +17,10 @@ html body .shell {
   
   .styled-text {
     color: black !important;
+    border: 5px solid black !important;
+    margin-top: -10px;
   }
-
+  
   .button {
     border: 5px solid black;
     min-width: 100px !important;
@@ -37,6 +39,29 @@ html body .shell {
     &:active {
       border: 10px solid black;
       background: lightgrey !important;
+    }
+  }
+}
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  html body .shell {
+    margin-top: 30px !important;
+    
+    &::before {
+      position: relative;
+      top: -30px !important;
+    }
+    
+    .styled-text {
+      margin-top: -30px !important;
+    }
+    
+    .button {
+      min-width: 135px !important;
+      min-height: 135px !important;
     }
   }
 }

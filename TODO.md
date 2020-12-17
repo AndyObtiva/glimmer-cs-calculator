@@ -2,6 +2,7 @@
 
 These are some feature suggestions:
 
+- Fix the ENTER button on the web
 - Make backspace button delete numbers one by one instead of all at the same time
 - Make delete button delete all numbers just like escape
 - Support copy/paste of result

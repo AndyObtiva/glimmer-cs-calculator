@@ -5,22 +5,29 @@
 html body .shell {
   place-content: center !important;
   min-height: 320px !important;
-  grid-gap: 0 !important;
+  gap: 0 !important;
   
   .styled-text {
     background: rgb(92, 89, 89) !important;
     color: white !important;
     font-size: 50px !important;
     max-width: 400px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   
   .button {
     border: 1px solid rgb(92, 89, 89) !important;
     padding: 0 !important;
+    margin: 0 !important;
     min-width: 60px !important;
     min-height: 50px !important;
     color: white;
     font-size: 22px !important;
+    
+    &:focus {
+      outline:0;
+    }
   }
 
   #button-1, #button-2, #button-3 {
@@ -33,5 +40,18 @@ html body .shell {
   
   #button-4, #button-8, #button-15 {
     background: rgb(232, 157, 39);
+  }
+}
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  html body .shell {
+    margin-top: 27px !important;
+    
+    .styled-text {
+      margin-top: -27px !important;
+    }
   }
 }
