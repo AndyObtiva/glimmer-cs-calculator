@@ -30,17 +30,17 @@ Here are the calculator commands under the [models directory](lib/models/glimmer
 
 ![Calculator Commands](glimmer-cs-calculator-command-pattern.png)
 
-[<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=40 />Download Glimmer Calculator v1.1.1 DMG for Mac](https://www.dropbox.com/s/2wbyy0z0w875n39/Glimmer%20Calculator-1.1.1.dmg?dl=1)
+[<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=40 />Download Glimmer Calculator v1.1.4 DMG for Mac](https://www.dropbox.com/s/g359xmeo66gu8xs/Glimmer%20Calculator-1.1.4.dmg?dl=1)
 
 [<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=40 />Download Glimmer Calculator v1.1.1 MSI for Windows](https://www.dropbox.com/s/e8b586s2xgjn9bg/Glimmer%20Calculator-1.1.1.msi?dl=1)
 
-[<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=40 />Download Glimmer Calculator v1.1.3 GEM for Linux](#setup-instructions)
+[<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=40 />Download Glimmer Calculator v1.1.4 GEM for Linux](#setup-instructions)
 
 [<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=40 />Visit Glimmer Calculator v1.1.2 WEB for Opal](https://glimmer-cs-calculator-server.herokuapp.com)
 
 ## Platforms
 
-- Mac: Tested and [packaged](https://github.com/AndyObtiva/glimmer-dsl-swt#packaging--distribution) for Mac. ([Download Here](https://www.dropbox.com/s/2wbyy0z0w875n39/Glimmer%20Calculator-1.1.1.dmg?dl=1))
+- Mac: Tested and [packaged](https://github.com/AndyObtiva/glimmer-dsl-swt#packaging--distribution) for Mac. ([Download Here](https://www.dropbox.com/s/g359xmeo66gu8xs/Glimmer%20Calculator-1.1.4.dmg?dl=1))
 - Windows: Tested and [packaged](https://github.com/AndyObtiva/glimmer-dsl-swt#packaging--distribution) for Windows. ([Download Here](https://www.dropbox.com/s/e8b586s2xgjn9bg/Glimmer%20Calculator-1.1.1.msi?dl=1))
 - Linux: Tested and [packaged](http://rubygems.org/gems/glimmer-cs-calculator) for Linux (Follow [setup instructions](#setup-instructions) to install [gem](http://rubygems.org/gems/glimmer-cs-calculator) and run `calculator` command)
 - Opal (Web): Tested with [Glimmer DSL for Opal](https://github.com/AndyObtiva/glimmer-dsl-opal) and [deployed to Heroku](https://glimmer-cs-calculator-server.herokuapp.com). Visit https://glimmer-cs-calculator-server.herokuapp.com
