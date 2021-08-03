@@ -34,7 +34,7 @@ Here are the calculator commands under the [models directory](lib/models/glimmer
 
 [<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=40 />Download Glimmer Calculator v1.1.1 MSI for Windows](https://www.dropbox.com/s/e8b586s2xgjn9bg/Glimmer%20Calculator-1.1.1.msi?dl=1)
 
-[<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=40 />Download Glimmer Calculator v1.1.3 GEM for Linux](#setup-instructions)
+[<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=40 />Download Glimmer Calculator v1.1.4 GEM for Linux](#setup-instructions)
 
 [<img alt="Glimmer Calculator Icon" src="glimmer-cs-calculator-icon.png" height=40 />Visit Glimmer Calculator v1.1.2 WEB for Opal](https://glimmer-cs-calculator-server.herokuapp.com)
 
