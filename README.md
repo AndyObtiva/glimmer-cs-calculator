@@ -22,7 +22,7 @@ Glimmer Calculator is a sample desktop GUI application built with [Glimmer DSL f
 
 Architectural Pattern is MVP (Model View Presenter) thanks to [Glimmer data-binding](https://github.com/AndyObtiva/glimmer-dsl-swt#data-binding) support.
 
-Glimmer Calculator was developed test-first following TDD (Test Driven Development) after [Glimmer Scaffolding](https://github.com/AndyObtiva/glimmer-dsl-swt#scaffolding). 
+Glimmer Calculator was developed test-first following TDD (Test Driven Development) after [Glimmer Scaffolding](https://github.com/AndyObtiva/glimmer-dsl-swt#scaffolding).
 
 Design Patterns discovered in the process were Facade (Presenter) and Command Pattern.
 
@@ -66,15 +66,15 @@ Afterwards, you may run `calculator` to bring up the calculator:
 calculator
 ```
 
-Note: If you cloned this project and bundle installed, you may invoke via `bin/calculator` instead. 
+Note: If you cloned this project and bundle installed, you may invoke via `bin/calculator` instead.
 
 #### Glimmer Custom Shell Reuse
 
-To reuse Calculator as a Glimmer Custom Shell inside another Glimmer application, add the 
+To reuse Calculator as a Glimmer Custom Shell inside another Glimmer application, add the
 following to the application's `Gemfile`:
 
 ```
-gem 'glimmer-cs-calculator', '1.1.3'
+gem 'glimmer-cs-calculator', '1.1.4'
 ```
 
 Run:
