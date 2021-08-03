@@ -195,6 +195,13 @@ describe Glimmer::Calculator::Presenter do
       expect(subject.result).to eq('3')
       subject.press('=')
       expect(subject.result).to eq('0.9')
+      
+      # extremely large number
+      9.times {subject.press('9')}
+      subject.press('*')
+      9.times {subject.press('9')}
+      subject.press('=')
+      expect(subject.result).to eq('999999998000000001')
     end
     
     it 'divides numbers' do
@@ -280,7 +287,7 @@ describe Glimmer::Calculator::Presenter do
       expect(subject.result).to eq('64')
       subject.press('=')
       expect(subject.result).to eq('64')
-    end    
+    end
     
   end
 end

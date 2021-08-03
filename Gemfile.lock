@@ -154,6 +154,7 @@ GEM
 
 PLATFORMS
   java
+  universal-java-1.8
 
 DEPENDENCIES
   easily_typable (~> 1.0.2)
@@ -165,4 +166,4 @@ DEPENDENCIES
   warbler (= 2.0.5)
 
 BUNDLED WITH
-   2.1.4
+   2.2.24
