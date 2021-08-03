@@ -13,8 +13,8 @@ module Glimmer
         end
         
         def calculate
-          calculation_result = BigDecimal.new(number1.to_s).send(operation_method, BigDecimal.new(number2.to_s)).to_f
-          calculation_result.to_s.match(/\.0+$/) ? calculation_result.to_i : calculation_result
+          calculation_result = BigDecimal.new(number1.to_s).send(operation_method, BigDecimal.new(number2.to_s)).to_s('F')
+          calculation_result.match(/\.0+$/) ? calculation_result.to_i : calculation_result
         end
         
         # Subclasses must implement to indicate operation method on number (e.g. :+ for addition)
