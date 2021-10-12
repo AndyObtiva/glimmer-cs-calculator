@@ -151,7 +151,8 @@ GEM
       ast (~> 2.4.1)
     pg (0.21.0)
     public_suffix (4.0.6)
-    puma (3.12.6)
+    puma (4.3.9)
+      nio4r (~> 2.0)
     rack (2.2.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -253,7 +254,7 @@ DEPENDENCIES
   opal-jquery (~> 0.4.4)
   opal-rails (~> 1.1.2)
   pg
-  puma (~> 3.11)
+  puma (~> 4.3)
   rails (~> 5.2.4, >= 5.2.4.4)
   sass-rails (~> 5.0)
   selenium-webdriver
